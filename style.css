@@ -1,0 +1,56 @@
+html {
+    scroll-behavior: smooth;
+}
+.soft-radial-bg {
+    width: 32rem; /* w-96 */
+    height: 32rem; /* h-96 */
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, 
+        rgb(239, 57, 184) 0%,  /* Full red at center */
+        rgba(235, 126, 204, 0.4) 40%, /* Softer red around */
+        rgba(255, 255, 255, 0.2) 80%, /* Almost faded */
+        rgba(255, 255, 255, 0) 100%  /* Invisible */
+    );
+    border-radius: 50%;
+    z-index: 0;
+    filter: blur(40px); /* Smooth blending effect */
+}
+.cursor {
+    display: inline-block;
+    width: 6px;
+    height: 30px;
+    background: black;
+    margin-left: 5px;
+    animation: blink 0.8s infinite;
+}
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+    /* General Animation Properties */
+    @keyframes fromLeft {
+        0% { transform: translateX(-100vw); opacity: 0; }
+        100% { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes fromRight {
+        0% { transform: translateX(100vw); opacity: 0; }
+        100% { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes fromBottom {
+        0% { transform: translateY(100vh); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+    }
+    
+    /* Apply to Elements */
+    .animate-from-left {
+        animation: fromLeft 1s ease-out forwards;
+    }
+    .animate-from-right {
+        animation: fromRight 1s ease-out forwards;
+    }
+    .animate-from-bottom {
+        animation: fromBottom 1s ease-out forwards;
+    }

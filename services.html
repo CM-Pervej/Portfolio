@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pervej Chowkider - Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 text-gray-900">
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+    
+    <!-- Services Section -->
+    <section class="pt-24 pb-16 px-8 md:px-16 lg:px-32">
+        <div class="text-center">
+            <p class="text-2xl text-red-400 font-semibold">My Services</p>
+            <p class="text-xl font-bold mt-3">I am a full-stack developer specializing in PHP, MySQL, and modern web technologies. I deliver high-quality, efficient, and responsive solutions tailored to your needs.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+            <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+                <h3 class="text-lg font-bold">Modern Web Design</h3>
+                <p class="text-gray-600">Creating sleek, modern, and visually appealing web designs.</p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+                <h3 class="text-lg font-bold">User-Friendly Landing Pages</h3>
+                <p class="text-gray-600">Designing intuitive and attractive landing pages that engage users.</p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+                <h3 class="text-lg font-bold">Responsive Websites</h3>
+                <p class="text-gray-600">Ensuring full compatibility across all devices and screen sizes.</p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+                <h3 class="text-lg font-bold">Real-Time Applications</h3>
+                <p class="text-gray-600">Developing interactive and dynamic applications with real-time functionality.</p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+                <h3 class="text-lg font-bold">Professional Portfolios</h3>
+                <p class="text-gray-600">Crafting personalized and elegant portfolio websites to showcase your work.</p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+                <h3 class="text-lg font-bold">Dynamic Web Solutions</h3>
+                <p class="text-gray-600">Building fully functional, feature-rich, and dynamic web applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>    
+</body>
+</html>

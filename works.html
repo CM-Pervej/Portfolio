@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pervej Chowkider - Works</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 text-gray-900">
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+    
+    <!-- Work Section -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 md:px-16 pt-24">
+        <p class="text-2xl text-red-400 font-semibold">My Works as a Frontend Developer</p>
+        <p class="text-lg md:text-xl font-bold text-center mt-4">I am a fullstack developer with 30+ frontend projects and 10+ backend projects.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            <a href="tea/index.html" class="border border-gray-400 p-5 bg-blue-200 text-lg font-bold text-center w-full md:w-auto">Tea House</a>
+            <a href="fruit/index.html" class="border border-gray-400 p-5 bg-blue-200 text-lg font-bold text-center w-full md:w-auto">Fruit Facts</a>
+            <a href="legal/index.html" class="border border-gray-400 p-5 bg-blue-200 text-lg font-bold text-center w-full md:w-auto">Legal Solution</a>
+        </div>
+    </section>
+
+    <script>
+        fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>    
+</body>
+</html>

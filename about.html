@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pervej Chowkider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>   
+
+    <!-- Hero Section -->
+    <section class="bg-blue-50 min-h-screen flex flex-col  justify-center items-center px-6 md:px-10 text-center pt-24">
+        <div class="soft-radial-bg"></div>
+        <article class="flex flex-col justify-center items-center z-10">
+            <h2 class="text-4xl font-bold text-red-400 mb-4">About Me</h2>
+            <p class="text-2xl text-gray-800 max-w-3xl leading-relaxed">
+                Hey there! I'm <span class="font-semibold text-black">Pervej Chowkider</span>, a passionate and results-driven Full Stack Web Developer.
+                I specialize in creating clean, scalable, and efficient web applications that enhance user experience.
+            </p>
+
+            <h2 class="text-4xl font-bold text-red-400 mb-4 text-start mt-10">Personal Information</h2>
+            <div class="flex justify-between gap-32">
+                <div class="flex gap-5">
+                    <p class="flex flex-col justify-start items-start gap-3 text-2xl">
+                        <span>Name:</span>
+                        <span>Nationality:</span>
+                        <span>Date of Birth:</span>
+                        <span>Address:</span>
+                        <span>Language:</span>
+                    </p>
+                    <p class="flex flex-col justify-start items-start gap-3 text-2xl">
+                        <b>Pervej Chowkider</b>
+                        <b>Bangladeshi</b>
+                        <b>19, September 1999</b>
+                        <b>Khulna, Bangladesh</b>
+                        <b>Bangla & English</b>
+                    </p>
+                </div>
+                <div class="flex gap-5">
+                    <p class="flex flex-col justify-start items-start gap-3 text-2xl">
+                        <span>Mobile:</span>
+                        <span>Email:</span>
+                        <span>Github:</span>
+                        <span>Linkedin:</span>
+                    </p>
+                    <p class="flex flex-col justify-start items-start gap-3 text-2xl">
+                        <b><a href="tel:+8801982525570" class="text-blue-500 hover:underline"> +880 1982 525570 </a></b>
+                        <b><a href="mailto:pervejbd2029@gmail.com" class="text-blue-500 hover:underline">pervejbd2029@gmail.com </a></b>
+                        <b><a href="https://github.com/CM-Pervej" target="_blank" class="text-blue-500 hover:underline">CM-Pervej</a></b>
+                        <b><a href="https://www.linkedin.com/in/cmpervej/" target="_blank" class="text-blue-500 hover:underline">cmpervej</a></b>
+                    </p>
+                </div>
+            </div>
+        </article>
+        <!-- Call to Action -->
+        <div class="mt-8 z-10 mb-5">
+            <p class="text-2xl">Looking for a developer to bring your ideas to life?</p>
+            <a href="contact.html" class="mt-3 inline-block bg-blue-500 text-white px-6 py-3 rounded-full text-2xl font-bold hover:bg-blue-600">Let's Connect</a>
+        </div>
+    </section>
+    
+    <script>
+        fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script> 
+</body>
+</html>
