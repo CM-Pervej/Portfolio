@@ -3,7 +3,7 @@
 Welcome to my portfolio! I'm **Pervej Chowkider**, a passionate **Full Stack Web Developer** specializing in PHP, MySQL, JavaScript, Tailwind CSS, and modern frontend technologies.
 
 ## 🚀 Live Demo
-🔗 **[View Portfolio](https://your-github-username.github.io/your-portfolio-repo/)**
+🔗 **[View Portfolio](https://cm-pervej.github.io/Portfolio/)**
 
 ## 📂 Project Overview
 This is my personal portfolio website showcasing my **skills, projects, and experience** as a developer. The website is built using:
