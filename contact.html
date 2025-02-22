@@ -12,22 +12,28 @@
         }
     </style>
 </head>
-<body class="bg-gray-200 text-gray-900">
+<body class="min-h-screen bg-gradient-to-r from-blue-200 via-blue-50 to-amber-200">
     <!-- Navbar -->
     <div id="navbar-placeholder"></div>
     
     <!-- Contact Section -->
-    <section class="min-h-screen flex flex-col items-center justify-center px-6 md:px-16 pt-24">
-        <p class="text-2xl text-red-400 font-semibold">My Contacts</p>
-        <p class="text-lg md:text-xl font-bold text-center mt-4">Feel free to connect with me through the following platforms.</p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 w-full max-w-lg">
-            <a href="https://github.com/CM-Pervej" class="border border-gray-400 p-5 bg-blue-200 text-lg font-bold text-center w-full">GitHub</a>
-            <a href="https://www.linkedin.com/in/cmpervej/" class="border border-gray-400 p-5 bg-blue-200 text-lg font-bold text-center w-full">LinkedIn</a>
-            <a href="#" class="border border-gray-400 p-5 bg-blue-200 text-lg font-bold text-center w-full">Mobile</a>
-        </div>
+    <section class="min-h-screen flex flex-col items-center justify-center px-96 pt-24">
+        <form action="https://formsubmit.co/pervej.cse19@gmail.com" method="POST" class="flex flex-col justify-center items-center gap-5 w-full px-10">
+            <h2 class="text-4xl mb-4 text-center font-extrabold bg-gradient-to-r from-red-500 via-blue-500 to-green-500 text-transparent bg-clip-text">Contact Me</h2>
+    
+            <input type="text" name="name" required class="w-full p-2 border rounded mb-3 input input-bordered input-lg" placeholder="Enter Your Name">
+            <input type="email" name="email" required class="w-full p-2 border rounded mb-3 input input-bordered input-lg" placeholder="Enter Your Email Address">
+            <textarea name="message" required class="w-full p-2 border rounded mb-3 textarea textarea-bordered h-36 textarea-lg" placeholder="Write Your Messages"></textarea>
+    
+            <input type="hidden" name="_next" id="next-url" value="success.html">
+            <input type="hidden" name="_captcha" value="false">
+    
+            <button type="submit" class="relative w-60 py-3 text-4xl font-extrabold border rounded-3xl border-gray-400 text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-blue-500 to-green-500 transition-all duration-300 hover:text-white hover:bg-gradient-to-r hover:from-red-500 hover:via-blue-500 hover:to-green-500 hover:bg-clip-border">Send </button>
+        </form>
     </section>
-
+    <script>
+        document.getElementById("next-url").value = window.location.origin + "/success.html";
+    </script>
     <script>
         fetch("navbar.html")
         .then(response => response.text())
